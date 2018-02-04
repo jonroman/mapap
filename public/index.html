@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mapquest">
+<head>
+<!-- Angular 1.6 or <.  Hashbangs are no longer needed.-->
+    <base href="/">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" Content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>Map Quest</title>
+<!-- JQuery Library -->
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap-->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- CSS -->
+	<link rel="stylesheet" src="/CSS/custom.css">
+	<link rel="stylesheet" href="CSS/custom.css">
+</head>
+<body>
+
+<div class="container my_main_bg">
+    <div id="page_header" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 opacity">
+        <div id="snappychap100"></div>
+        <h1>Map Quest</h1>
+        <div class="btn-group">
+            <a class="btn btn-lg btn-primary" href="/map">Map</a>
+            <a class="btn btn-lg btn-primary" href="/">Sign In</a>
+            <a class="btn btn-lg btn-primary" href="/">More</a>
+        </div>
+    </div>
+    <div id="toggle_main" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 toggle_bar opacity">
+        <span class="float_left">&#8693;</span>Angular<span class="float_right">&#8693;</span>
+    </div>
+    <!-- SPA -->
+    <div id="main_view" class="main_view col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-view></div>
+	<!-- REACT -->
+    <div id="toggle_main" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 toggle_bar opacity">
+        <span class="float_left">&#8693;</span>REACT<span class="float_right">&#8693;</span>
+    </div>
+    <div id="root" class="main_view col-lg-12 col-md-12 col-sm-12 col-xs-12">LET's PUT SOME REACT HERE </div>
+
+    <div id="page_footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 opacity">
+        <a href="/content">Content</a> |
+        <a href="/map">Map</a> |
+        <a href="#">Author</a>
+        <div id="snappychap100"></div>
+        <div id="disclaimer">Disclaimer: </div>
+    </div>
+</div> <!--END CONTAINER -->
+
+
+<div id="overlay_BG">
+    <div id="main_overlay" class="overlay">
+        <div id="overlay_title_bar">
+            <div id="snappychap100"></div>
+            <h1>Map Quest</h1>
+            <div id="overlay_btn_group" class="btn-group">
+              <button type="button" id="close_overlay" class="btn btn-primary" >Close</button>
+            </div>
+        </div>
+        <div class="overlay_view"></div>
+    </div>
+</div>
+</body>
+</html>
+
+<!-- Angular Library -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+<!-- Routing -->
+    <script src="angular-app/app.js"></script>
+    <script src="angular-app/map/map-controller.js"></script>
+<script>
+	$("#toggle_contents").on("click", function(){
+		$("#table_of_content").toggle();
+	});
+	$("#toggle_main").on("click", function(){
+		$("#main_view").toggle();
+	});
+</script>
+
+<!-- Overlay Widget -->
+<script type=""text/javascript" src="widgets/overlay/overlay.js"></script>

@@ -1,0 +1,82 @@
+<h1>{{vm.title}}</h1>
+<div ng-show="vm.showme" class="well well-sm">
+	<div class="panel panel-success scrollable">
+		<div class="panel-heading">
+			<table>
+				<tr ng-repeat="row in vm.map track by $index">
+					<td>{{$index}}</td>
+					<td class="td td_{{column}}" ng-repeat="column in row track by $index">{{column}}</td>
+					<td>{{$index}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div ng-show="vm.shortestPath1.length > 0" class="panel panel-info scrollable">
+		<div class="panel-heading">
+			This is the shortest path. Number of Steps : {{vm.shortestPathNumOfSteps1}}
+		</div>
+			{{vm.shortestPath1}}	
+	</div>
+	<div ng-show="vm.shortestPath2.length > 0" class="panel panel-info scrollable">
+		<div class="panel-heading">
+			This is the 2nd shortest path. Number of Steps : {{vm.shortestPathNumOfSteps2}}
+		</div>
+			{{vm.shortestPath2}}	
+	</div>
+</div>
+<form name="vm.map_input" ng-submit="vm.mapIt()">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-warning" ng-click="vm.reset()">Reset</button>
+			<label> Time to Execute : </label> {{vm.timer}}
+        </div>
+    </div>
+
+    <textarea ng-hide="vm.showme" class="form-control scrollable" name="mapMaze" required rows="20" cols="150" ng-model="vm.mapMaze" >{{myTextarea}}</textarea>
+</form>
+
+<style>
+	.scrollable {
+		overflow-x : scroll;
+		overflow-y : scroll;
+	}
+
+	.td {
+		width  : 20px;
+		height : 20px;
+		background-color : none;
+		border-radius: 25px;
+		border-radius: 50;
+		border: none;
+	}
+
+	.td_A {
+		background-color : red;
+		border-style: outset;
+	}
+
+	.td_B {
+		background-color : red;
+		border-style: outset;
+	}
+
+	.td_# {
+		background-color : grey;
+		border-style: outset;
+	}
+
+	.td_0 {
+		background-color : green;
+		color : green;
+		border-style: inset;
+		background: radial-gradient(circle, green, yellow, green);
+	}
+
+	.td_1 {
+		background-color : brown;
+		color : brown;
+		border-style: inset;
+		background: radial-gradient(circle, brown, yellow, brown);
+	}
+</style>
