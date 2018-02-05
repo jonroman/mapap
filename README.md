@@ -1,11 +1,14 @@
-# My project's README
+# Map App 
+
+Description: Using breadth first search find the shortest path between
+A and B.
 
 
 Screenshots
-![alt text](screenshots/screenshot1.png "Map App Form")
-![alt text](screenshots/screenshot2.png "Map App Result")
-![alt text](screenshots/screenshot3.png "Map App Shortest Path")
+![Map App Form](screenshots/screenshot1.png "Map App Form")
+![Map App Result](screenshots/screenshot2.png "Map App Result")
+![Map App Shortest path](screenshots/screenshot3.png "Map App Shortest Path")
 
 
-![alt text](screenshots/headshot.png "Jon Roman")
+![Jon Roman Web Software Engineer](screenshots/headshot.png "Jon Roman")
 Author : Jon Roman
