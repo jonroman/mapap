@@ -1,6 +1,7 @@
 
 
-# Breadth First Search. Find the shortest path between A and B.
+# Breadth First Search. 
+## Find the shortest path between A and B.
 
 # ![Map App Form](https://github.com/jonroman/mapap/blob/master/screenshots/scrrenshot1.PNG "Map App Form")
 # ![Map App Result](https://github.com/jonroman/mapap/blob/master/screenshots/scrrenshot2.PNG "Map App Result")
