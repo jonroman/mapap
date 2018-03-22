@@ -14,5 +14,6 @@ Author : Jon Roman
 2. `npm install` to install node modules
 3. `node app.js` OR nodemon app.js
 
-## Alternative Viewing
-http://ec2-13-59-103-255.us-east-2.compute.amazonaws.com:8080/map
+## NOTE
+### The breadth first search code
+### FILE: public/angular-app/map/map-controller.js
